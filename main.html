@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="shortcut icon" href="./img/favicon.ico.svg" type="image/x-icon">
+  
+  <script defer src="./JS/interface.js"></script>
+  <script defer src="./JS/app.js"></script>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+  <title>YOULIST</title>
+</head>
+
+
+<body>
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="./heroes/index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <svg width="40" height="40" fill="#0d6efd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.5 6a3 3 0 0 0-3-3h-.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H6.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H4.5a3 3 0 0 0-3 3v.562a.187.187 0 0 0 .188.188h20.625a.188.188 0 0 0 .187-.188V6Z">
+            </path>
+            <path
+              d="M1.5 19.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.39a.14.14 0 0 0-.14-.14H1.64a.14.14 0 0 0-.14.14V19.5Zm16.125-9.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Z">
+            </path>
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Contatos</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Sobre Nós</a></li>
+        </ul>
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <!-- <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> -->
+            <small id="emailUsuario"></small>
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#tarefas">Minhas Tarefas</a></li>
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Configurações</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a id="btnLogout" class="dropdown-item" href="#">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="b-example-divider"></div>
+  <main>
+    <div class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h4 class="mb-5">Adicionar Tarefa</h4>
+          <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição</label>
+            <input type="text" class="form-control" id="descricao">
+          </div>
+          <div class="mb-3">
+            <label for="prazo" class="form-label">Prazo</label>
+            <input type="date" id="prazo" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-select" id="status">
+              <option value="">---Selecione---</option>
+              <option value="Pendente">Pendente</option>
+              <option value="Iniciada">Iniciada</option>
+              <option value="Concluida">Concluida</option>
+            </select>
+          </div>
+          <div class="">
+            <a class="btn btn-primary" onclick="adicionarTarefa()">Adicionar Tarefa</a>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="./img/tarefa.jpg" alt="" width="400" height="450">
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+
+    <div class="container  my-5">
+      <div id="tarefas" class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <h4>Tarefas à Fazer</h4>
+        <table class="table">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">#</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Prazo</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

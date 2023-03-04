@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.108.0">
+  <title>YOULIST</title>
+  <script defer src="./JS/signInterface.js"></script>
+  <script defer src="./JS/signInApp.js"></script>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/heroes/">
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/favicon.ico.svg" type="image/x-icon">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+  <link href="./CSS/heroes.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="./index.html"
+        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg width="40" height="40" fill="#0d6efd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M22.5 6a3 3 0 0 0-3-3h-.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H6.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H4.5a3 3 0 0 0-3 3v.562a.187.187 0 0 0 .188.188h20.625a.188.188 0 0 0 .187-.188V6Z">
+          </path>
+          <path
+            d="M1.5 19.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.39a.14.14 0 0 0-.14-.14H1.64a.14.14 0 0 0-.14.14V19.5Zm16.125-9.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Z">
+          </path>
+        </svg>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Contatos</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Sobre Nós</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <a href="#containerLogin">
+          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+        </a>
+        <a href="#containerRegistrar">
+          <button type="button" class="btn btn-primary">Registrar-se</button>
+        </a>
+      </div>
+    </header>
+  </div>
+  <div class="b-example-divider"></div>
+  <main>
+    <div class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1">Adicione Suas Tarefas e Organize a Sua Vida.<br></h1>
+          <p class="lead">Em meio uma rotina pessoal e profissional cada vez mais dinâmica, as pessoas acabam perdendo
+            as suas prioridades. As listas de tarefas nos permitem ficar por dentro de tudo que necessita ser feito ao
+            longo do dia para não perdermos os prazos</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <a href="#containerLogin">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Fazer Login</button>
+            </a>
+            <a href="#containerRegistrar">
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Registrar-se</button>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="./img/img.jpg" alt="" width="680">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="b-example-divider"></div>
+
+    <div id="containerLogin" class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-md-10 mx-auto col-lg-5">
+          <div class="m-4 d-flex">
+              <svg width="40" height="40" fill="#0d6efd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.5 6a3 3 0 0 0-3-3h-.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H6.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H4.5a3 3 0 0 0-3 3v.562a.187.187 0 0 0 .188.188h20.625a.188.188 0 0 0 .187-.188V6Z">
+                </path>
+                <path
+                  d="M1.5 19.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.39a.14.14 0 0 0-.14-.14H1.64a.14.14 0 0 0-.14.14V19.5Zm16.125-9.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Z">
+                </path>
+              </svg>
+            <H3 class="ms-2">Login</H3>
+          </div>
+          <form id="formLogin" class="p-4 p-md-5 border rounded-3 bg-light">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="emailInputLogin" placeholder="name@example.com">
+              <label for="emailInputLogin">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="senhaInputLogin" placeholder="Password">
+              <label for="senhaInputLogin">Senha</label>
+            </div>
+            <small id="infoLogin"></small>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+            <hr class="my-4">
+          </form>
+        </div>
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">O Que Fazer Hoje, Para Alcançar Seu Objetivo Amanhã!!!</h1>
+          <p class="col-lg-10 fs-4">O sucesso começa com uma agenda bem organizada! A rotina das pessoas está mais
+            complexa e não dá pra lembrar de tudo. O YOULIST existe para te ajudar com suas listas de tarefas e
+            compromissos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div id="containerRegistrar" class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">Tome Medidas Para Melhorar Sua Vida</h1>
+          <p class="col-lg-10 fs-4">Concentre-se nas coisas que realmente importam e torne sua vida mais organizada.
+            Saber o
+            que precisa ser feito é o primeiro passo para uma vida mais organizada.<br>Vamos
+            gerênciar juntos suas principais tarefas?</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <div class="m-4 d-flex">
+            <svg width="40" height="40" fill="#0d6efd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 6a3 3 0 0 0-3-3h-.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H6.75v-.73c0-.404-.31-.75-.714-.77a.75.75 0 0 0-.786.749V3H4.5a3 3 0 0 0-3 3v.562a.187.187 0 0 0 .188.188h20.625a.188.188 0 0 0 .187-.188V6Z">
+              </path>
+              <path
+                d="M1.5 19.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.39a.14.14 0 0 0-.14-.14H1.64a.14.14 0 0 0-.14.14V19.5Zm16.125-9.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm-3.75-3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Zm0 3.75a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25Z">
+              </path>
+            </svg>
+          <H3 class="ms-2">Registre-se de Graça</H3>
+        </div>
+          <form id="formCadastro" class="p-4 p-md-5 border rounded-3 bg-light">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating  mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">SENHA</label>
+            </div>
+            <div id="containerSenha" class="form-floating  mb-3">
+              <input type="password" class="form-control" id="confirmarSenha" placeholder="Password">
+              <label for="confirmarSenha">CONFIRME SUA SENHA</label>
+              <small id="InfoRegistrar"></small>
+            </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Registrar-se</button>
+            <hr class="my-4">
+            <small class="text-muted">Ao clicar em Cadastre-se, você concorda com os termos de uso.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+  </main>
+
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+
+</body>
+
+</html>
